@@ -105,6 +105,4 @@ Command(resume=...) 恢复 → Agent 继续执行 → 生成回答
 - 建议配置 Celery `acks_late=True` 和 `task_time_limit` 提升任务可靠性
 - MCP Server 需要配置有效的高德地图 API Key
 
-## 许可证
 
-MIT
