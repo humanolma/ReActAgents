@@ -50,7 +50,7 @@ class InterruptResponse(BaseModel):
     task_id: str
     # 响应类型：accept(允许调用), edit(调整工具参数，此时args中携带修改后的调用参数), response(直接反馈信息，此时args中携带修改后的调用参数)，reject(不允许调用)
     response_type: str
-    # 如果是edit, response类型，可能需要额外的参数
+    # 如果响应类型是edit或response，可能需要额外的参数
     args: Optional[Dict[str, Any]] = None
 
 # 定义数据模型 系统内的会话状态响应数据
