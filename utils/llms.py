@@ -10,7 +10,8 @@ logger = logging.getLogger(__name__)
 # 设置日志器级别为DEBUG
 logger.setLevel(logging.DEBUG)
 # logger.setLevel(logging.INFO)
-logger.handlers = []  # 清空默认处理器
+# 清空默认处理器
+logger.handlers = []
 # 使用ConcurrentRotatingFileHandler
 handler = ConcurrentRotatingFileHandler(
     # 日志文件
