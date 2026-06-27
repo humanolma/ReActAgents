@@ -10,7 +10,6 @@ from langchain_core.tools import tool
 from .config import Config
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
-
 # 设置日志基本配置，级别为DEBUG或INFO
 logger = logging.getLogger(__name__)
 # 设置日志器级别为DEBUG
