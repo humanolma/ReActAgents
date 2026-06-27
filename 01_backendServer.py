@@ -404,7 +404,7 @@ async def delete_agent_task(user_id: str, session_id: str, task_id: str):
         logger.error(f"status_code=404,用户 {user_id}:{session_id}:{task_id} 的任务不存在")
         raise HTTPException(status_code=404, detail=f"用户 {user_id}:{session_id}:{task_id} 的任务不存在")
 
-    # 如果存在 则删除任务
+    # 如果存在则删除任务
     await app.state.session_manager.delete_session(user_id, session_id, task_id)
     response = {
         "status": "success",
