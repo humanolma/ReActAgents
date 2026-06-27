@@ -1,13 +1,12 @@
 import os
 
-
 class Config:
     """统一的配置类，集中管理所有常量"""
     # 日志持久化存储
     LOG_FILE = "logfile/app.log"
     if not os.path.exists(os.path.dirname(LOG_FILE)):
         os.makedirs(os.path.dirname(LOG_FILE))
-    MAX_BYTES = 5*1024*1024,  # 5MB，达到上限后触发日志轮转
+    MAX_BYTES = 5*1024*1024,
     BACKUP_COUNT = 3
 
     # PostgreSQL数据库配置参数
