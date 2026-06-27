@@ -45,10 +45,24 @@ cp .env.example .env
 
 ### 4. 启动数据库
 
+本项目依赖 PostgreSQL 和 Redis 两个数据库，已提供 Docker Compose 配置，一键启动即可。
+
+**前置条件**：安装 Docker Desktop 并启动。
+
+# 启动 PostgreSQL
 ```bash
-cd docker/postgresql && docker-compose up -d
-cd ../redis && docker-compose up -d
+cd docker/postgresql
+docker-compose up -d
 ```
+
+# 启动 Redis
+```bash
+cd ../redis
+docker-compose up -d
+```
+启动后可通过 docker ps 确认两个容器都在运行，
+也可用 Navicat / RedisInsight 等客户端连接验证。
+
 
 ### 5. 启动服务
 
