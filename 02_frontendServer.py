@@ -29,7 +29,6 @@ console = Console(theme=custom_theme)
 # 后端API地址
 API_BASE_URL = "http://localhost:8001"
 
-
 # 调用API接口获取当前系统内全部的会话状态信息
 def get_system_info():
     """
@@ -77,7 +76,7 @@ def invoke_agent(user_id: str, session_id: str, task_id: str, query: str, system
     else:
         raise Exception(f"API调用失败: {response.status_code} - {response.text}")
 
-# 调用API接口恢复被中断的智能体运行并等待运行完成或再次中断并返回任务ID
+# 调用API接口恢复被中断的智能体运行,等待运行完成或再次中断并返回任务ID
 def resume_agent(user_id: str, session_id: str, task_id: str, response_type: str, args: Optional[Dict[str, Any]] = None):
     """
     发送响应以恢复智能体执行
